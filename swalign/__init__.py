@@ -199,7 +199,7 @@ class LocalAlignment(object):
                 if matrix.get(row, c)[0] > max_val:
                     col = c
                     max_val = matrix.get(row, c)[0]
-            col = matrix.cols - 1
+            col = col - 1 # starting from the max in last row not from the last cell
             val = matrix.get(row, col)[0]
         else:
             # backtrack from max
